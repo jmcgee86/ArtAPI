@@ -6,11 +6,10 @@ $(document).ready(function() {
 		data: {
             format: 'json',
 			key: APIKEY,
-			//p: "100",
-			ps: "100",
+			ps: "5",
 			imgonly: "True",
 			type: "painting",
-			q: "Johannes vermeer"
+			q: "Johannes Vermeer"
 		},
 		success: function(data) {
 				console.log(data);
@@ -19,9 +18,7 @@ $(document).ready(function() {
 							var item = document.createElement("LI");
 							var link = data.artObjects[i].links.web;
 							item.innerHTML = '<a target="_blank" href= "' + link + '">' + data.artObjects[i].title + '</a>';
-						//	var br = document.createElement("BR");
 							document.getElementById("work").appendChild(item);
-						//	document.getElementById("work").appendChild(br);
 			}
 		}
 	});
