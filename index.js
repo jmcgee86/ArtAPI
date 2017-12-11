@@ -1,5 +1,7 @@
 /*global $ APIKEY */
 $(document).ready(function() {
+	$("#source").submit(function(event) {
+		event.preventDefault();
 	$.ajax({
 		method: "GET",
 		url: "https://www.rijksmuseum.nl/api/en/collection",
@@ -9,7 +11,7 @@ $(document).ready(function() {
 			ps: "5",
 			imgonly: "True",
 			type: "painting",
-			q: "Johannes Vermeer"
+			q: document.getElementById("artist").value
 		},
 		success: function(data) {
 				console.log(data);
@@ -23,5 +25,5 @@ $(document).ready(function() {
 		}
 	});
 });
-
+});
 
