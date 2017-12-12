@@ -9,22 +9,20 @@
     -->
 	<link href="style.css" rel="stylesheet">
 </head>
-<body>
-	<div class="container" id="bg">
-		<h1>Art from the Rijksmusuem by Vermeer</h1>
-	
+<body id ="bg">
+	<div class="container">
+		<h1>Art from the Rijksmusuem <span id ="chosenArtist"></span></h1>
+	<div class = "container" id="cont">
 	<form id="source" name="source">
-	
 		<select id="artist">
-			<option value = "Johannes Vermeer">Vermeer</option>
+			<option value = "Vermeer">Vermeer</option>
 			<option value = "Rembrandt">Rembrandt</option>
-			<option value = "Steen">Steen</option>
+			<option value = "Jan Havicksz Steen">Steen</option>
 		</select>
 		<button class="btn btn-primary" type="submit">Submit</button>
 		</form>
 		<ul id = "work"></ul>
-		
-		<img src="https://www.rijksmuseum.nl/en/collection/SK-A-1537">
+		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
 	</script> 

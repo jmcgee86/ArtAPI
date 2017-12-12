@@ -1,5 +1,5 @@
 body {
-     background-image: url("https://news.artnet.com/app/news-upload/2017/09/Vermeer-view-of-delft-1024x850.jpg");
+     background-image: url("https://tickets.holland.com/wp-content/uploads/2015/07/rijksmuseum-bew.jpg");
 	background-repeat: no-repeat;    	
 	background-size: cover;
 }
@@ -7,9 +7,16 @@ body {
 h1 {
     font-weight: 500;
     font-size: 3em;
+    text-align: center;
+    color: white;
 }
 
 ul{
     font-size: 1.5em;
     font-weight: 500;
+}
+
+#cont{
+    opacity: .6;
+    background-color: black;
 }

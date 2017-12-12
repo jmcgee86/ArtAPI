@@ -2,6 +2,8 @@
 $(document).ready(function() {
 	$("#source").submit(function(event) {
 		event.preventDefault();
+		document.getElementById("work").innerHTML = ""; //removes headlines from any previous selected sources
+
 	$.ajax({
 		method: "GET",
 		url: "https://www.rijksmuseum.nl/api/en/collection",
@@ -20,10 +22,21 @@ $(document).ready(function() {
 							var item = document.createElement("LI");
 							var link = data.artObjects[i].links.web;
 							item.innerHTML = '<a target="_blank" href= "' + link + '">' + data.artObjects[i].title + '</a>';
+							document.getElementById("chosenArtist").innerHTML = "by: " + document.getElementById("artist").value;
 							document.getElementById("work").appendChild(item);
+					
 			}
+				if (document.getElementById("artist").value == "Vermeer"){
+								document.body.style.backgroundImage = "url('https://news.artnet.com/app/news-upload/2017/09/Vermeer-view-of-delft-1024x850.jpg')";
+							}else if(document.getElementById("artist").value == "Rembrandt"){
+								document.body.style.backgroundImage = "url('https://mosaicmagazine.com/wp-content/uploads/2016/06/Rembrandt-Main.jpg')";
+							}
+							else if(document.getElementById("artist").value == "Jan Havicksz Steen"){
+									document.body.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Jan_Havicksz._Steen_-_Het_vrolijke_huisgezin_-_Google_Art_Project.jpg/1540px-Jan_Havicksz._Steen_-_Het_vrolijke_huisgezin_-_Google_Art_Project.jpg')";
+							}
 		}
 	});
 });
 });
 
+//     "https://news.artnet.com/app/news-upload/2017/09/Vermeer-view-of-delft-1024x850.jpg";
