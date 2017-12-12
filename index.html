@@ -14,12 +14,14 @@
 		<h1>Art from the Rijksmusuem <span id ="chosenArtist"></span></h1>
 	<div class = "container" id="cont">
 	<form id="source" name="source">
-		<select id="artist">
-			<option value = "Vermeer">Vermeer</option>
+		<select class="btn btn-primary" data-style="btn-primary" id="artist">
+			<option value = "">Choose an Artist</option>
+			<option value = "Johannes Vermeer">Vermeer</option>
 			<option value = "Rembrandt">Rembrandt</option>
 			<option value = "Jan Havicksz Steen">Steen</option>
+			<option value = "Peter Paul Rubens">Rubens</option> 
 		</select>
-		<button class="btn btn-primary" type="submit">Submit</button>
+		<button class="btn btn-primary" type="submit">Submit to Display</button>
 		</form>
 		<ul id = "work"></ul>
 		</div>
